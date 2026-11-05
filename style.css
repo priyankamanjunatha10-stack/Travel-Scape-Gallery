@@ -1,0 +1,184 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4f4f4;
+}
+
+header{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+header h1{
+  margin-bottom:15px;
+  font-size:2.5rem;
+}
+
+.filter-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.filter-buttons button{
+  padding:10px 20px;
+  border:none;
+  background:white;
+  color:#0f172a;
+  cursor:pointer;
+  border-radius:5px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons .active{
+  background:#38bdf8;
+  color:white;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 300px));
+  gap:20px;
+  padding:30px;
+}
+
+.gallery-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.gallery-item img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.1);
+}
+
+.overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  text-align:center;
+  padding:15px;
+  transform:translateY(100%);
+  transition:0.4s;
+}
+
+.gallery-item:hover .overlay{
+  transform:translateY(0);
+}
+
+.lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.lightbox img{
+  width:80%;
+  max-width:800px;
+  border-radius:10px;
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+}
+
+.lightbox-controls{
+  position:absolute;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:0 30px;
+}
+
+.prev,
+.next{
+  color:white;
+  font-size:40px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  header h1{
+    font-size:2rem;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .lightbox img{
+    width:95%;
+  }
+
+}
+#searchBox{
+  width:300px;
+  max-width:90%;
+  padding:10px;
+  margin:15px auto;
+  display:block;
+  border-radius:8px;
+  border:none;
+  outline:none;
+  font-size:16px;
+}
+#themeToggle{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin:10px;
+}
+
+.light-mode{
+    background:#ffffff;
+    color:#000;
+}
+
+.light-mode header{
+    background:#f5f5f5;
+}
+#topBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:12px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+}

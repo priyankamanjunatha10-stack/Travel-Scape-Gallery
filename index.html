@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelScape Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+  <header>
+    <h1>🌍TravelScape Gallery</h1>
+    <div class="filter-buttons">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="beach">Beaches</button>
+      <button data-filter="mountain">Mountains</button>
+      <button data-filter="city">Cities</button>
+    </div>
+      <input type="text" id="searchBox" placeholder="🔍 Search destinations...">
+      <button id="themeToggle">🌙 Dark Mode</button>
+      <p id="imageCount">📸 Total Images: 12</p>
+  </header>
+
+  <section class="gallery">
+
+    <div class="gallery-item beach">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Maldives">
+      <div class="overlay"><h3>Maldives</h3></div>
+    </div>
+
+    <div class="gallery-item beach">
+      <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21" alt="Goa">
+      <div class="overlay"><h3>Goa</h3></div>
+    </div>
+
+    <div class="gallery-item beach">
+      <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a" alt="Gokarna">
+      <div class="overlay"><h3>Malpe</h3></div>
+    </div>
+
+    <div class="gallery-item beach">
+      <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86" alt="Varkala">
+      <div class="overlay"><h3>Varkala</h3></div>
+    </div>
+
+    <div class="gallery-item mountain">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Annamalai">
+      <div class="overlay"><h3>Annamalai</h3></div>
+    </div>
+
+    <div class="gallery-item mountain">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" alt="Kangchenjunga">
+      <div class="overlay"><h3>Kangchenjunga</h3></div>
+    </div>
+
+    <div class="gallery-item mountain">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Manali">
+      <div class="overlay"><h3>Malenadu</h3></div>
+    </div>
+
+    <div class="gallery-item mountain">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Nanda Devi">
+      <div class="overlay"><h3>Mullayanagiri</h3></div>
+    </div>
+
+    <div class="gallery-item city">
+      <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df" alt="Delhi">
+      <div class="overlay"><h3>Bengaluru</h3></div>
+    </div>
+
+    <div class="gallery-item city">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" alt="Mumbai">
+      <div class="overlay"><h3>Mumbai</h3></div>
+    </div>
+
+    <div class="gallery-item city">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Lucknow">
+      <div class="overlay"><h3>Lucknow</h3></div>
+    </div>
+
+    <div class="gallery-item city">
+      <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000" alt="Patna">
+      <div class="overlay"><h3>Patna</h3></div>
+    </div>
+  </section>
+
+  <div class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <div class="lightbox-controls">
+      <span class="prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </span>
+
+      <span class="next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <button id="topBtn">⬆</button>
+</body>
+</html>
